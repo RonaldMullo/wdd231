@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home · Chamber of Commerce</title>
+  <title>Discover · Chamber of Commerce</title>
   <meta name="description" content="Quito Chamber of Commerce - resources, events, business directory, and memberships.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +24,8 @@
     
     <nav aria-label="Primary">
       <ul class="container">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html" aria-current="page">Discover</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
       </ul>
@@ -34,47 +34,49 @@
   </header>
 
   
-<main>
-  <section class="hero" aria-label="City of Quito">
-    <img src="images/quito.jpg" alt="View of Quito" style="width:100%; height:auto;">
-    <div class="hero__content">
-      <h1>Boosting Quito Businesses</h1>
-      <p>Events, networking, and resources to grow your company.</p>
-      <a class="cta" href="#eventos">See upcoming events</a>
-    </div>
+<main class="container">
+  <section class="card">
+    <h1>Discover Quito</h1>
+    <p>History, demographics, and quality of life for new businesses and residents.</p>
   </section>
 
-  <div class="container">
-    <h2 class="section-title" id="eventos">Home</h2>
-    <div class="grid grid-3">
-      <article class="card">
-        <h3>Events</h3>
-        <ul class="list" id="events-list">
-          <li>Loading…</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Current Weather</h3>
-        <div class="weather">
-          <div class="weather__icon" aria-hidden="true">⛅</div>
-          <div>
-            <strong>Quito: 18–20°C</strong><br>
-            <span class="tag">Partly cloudy</span><br>
-            Humidity 54% · Alt. 2,850 m
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <h3>Forecast</h3>
-        <ul class="list" id="forecast-list">
-          <li>Loading…</li>
-        </ul>
-      </article>
-    </div>
+  <section class="grid">
+    <article class="card">
+      <h3>Local History</h3>
+      <p>Quito, a UNESCO World Heritage Site, combines tradition and modernity.
+      The Historic Center and neighborhoods like La Ronda or Guápulo offer a vibrant
+      tourist and commercial ecosystem.</p>
+    </article>
+    <article class="card">
+      <h3>Demographics</h3>
+      <ul class="list">
+        <li>Metropolitan population: ~2.7 M</li>
+        <li>Median age: 31 years</li>
+        <li>Key sectors: tourism, technology, commerce, light manufacturing</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Quality of Life</h3>
+      <p>Extensive green areas, prestigious universities, and air connectivity.
+      Competitive operating costs compared to other urban centers in the region.</p>
+    </article>
+  </section>
 
-    <h3 class="section-title">Featured Businesses</h3>
-    <div class="grid" id="directory-sample"></div>
-  </div>
+  <section class="grid">
+    <article class="card">
+      <h3>Gallery</h3>
+      <div class="grid" style="grid-template-columns:repeat(3,1fr); gap:.5rem">
+        <img src="https://www.viajesyfotografia.com/wp-content/uploads/2020/01/quito_9823_result-1.jpg" alt="Quito Historic Center">
+        <img src="https://pactodealcaldes-la.org/ciudadesemblematicas/wp-content/uploads/2023/06/Quito-6.jpg" alt="Panecillo – view">
+        <img src="https://as1.ftcdn.net/jpg/10/10/15/22/1000_F_1010152260_hNCwy537C6lq0GNKRq160EwrCjfwo19y.jpg" alt="Parks and green areas">
+      </div>
+    </article>
+    <article class="card">
+      <h3>Current Events</h3>
+      <p>Check the calendar on the <a href="index.html#eventos">Home</a> page for workshops,
+      fairs, and business roundtables.</p>
+    </article>
+  </section>
 </main>
 
 
@@ -96,7 +98,6 @@
           <span>WDD231 Class Project</span><br>
           Ronald Mullo<br>
           <small>© <span data-year></span> Quito Chamber of Commerce · Last modified: <span data-lastmod></span></small>
-           
         </div>
       </div>
     </div>

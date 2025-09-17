@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home · Chamber of Commerce</title>
+  <title>Directory · Chamber of Commerce</title>
   <meta name="description" content="Quito Chamber of Commerce - resources, events, business directory, and memberships.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,9 +24,9 @@
     
     <nav aria-label="Primary">
       <ul class="container">
-        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
         <li><a href="join.html">Join</a></li>
       </ul>
     </nav>
@@ -34,48 +34,50 @@
   </header>
 
   
-<main>
-  <section class="hero" aria-label="City of Quito">
-    <img src="images/quito.jpg" alt="View of Quito" style="width:100%; height:auto;">
-    <div class="hero__content">
-      <h1>Boosting Quito Businesses</h1>
-      <p>Events, networking, and resources to grow your company.</p>
-      <a class="cta" href="#eventos">See upcoming events</a>
-    </div>
-  </section>
+<main class="container">
+  <h1>Member Directory</h1>
+  <p>Search and connect with local businesses. Is your company not listed yet? <a href="join.html">Join today</a>.</p>
 
-  <div class="container">
-    <h2 class="section-title" id="eventos">Home</h2>
-    <div class="grid grid-3">
-      <article class="card">
-        <h3>Events</h3>
-        <ul class="list" id="events-list">
-          <li>Loading…</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Current Weather</h3>
-        <div class="weather">
-          <div class="weather__icon" aria-hidden="true">⛅</div>
-          <div>
-            <strong>Quito: 18–20°C</strong><br>
-            <span class="tag">Partly cloudy</span><br>
-            Humidity 54% · Alt. 2,850 m
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <h3>Forecast</h3>
-        <ul class="list" id="forecast-list">
-          <li>Loading…</li>
-        </ul>
-      </article>
-    </div>
-
-    <h3 class="section-title">Featured Businesses</h3>
-    <div class="grid" id="directory-sample"></div>
+  <div class="card">
+    <label class="input" for="q">
+      <span>Search</span>
+      <input id="q" type="search" placeholder="Coffee, technology, handicrafts…" oninput="filterDir(this.value)">
+    </label>
   </div>
+
+  <section class="directory" id="directory"></section>
 </main>
+
+<script>
+async function loadDir(){
+  const res = await fetch('./data/members.json');
+  const data = await res.json();
+  window._members = data;
+  renderDir(data);
+}
+function renderDir(arr){
+  const root = document.getElementById('directory');
+  root.innerHTML = arr.map(m=>`
+    <article class="card business">
+      <img src="${m.logo}" alt="Logo ${m.name}">
+      <div>
+        <h3>${m.name}</h3>
+        <div class="tag">${m.tagline}</div>
+        <div>Email: <a href="mailto:${m.email}">${m.email}</a></div>
+        <div>Phone: <a href="tel:${m.phone}">${m.phone}</a> · <a href="${m.url}" target="_blank" rel="noopener">Website</a></div>
+      </div>
+    </article>`).join('');
+}
+function filterDir(q=''){
+  q = q.toLowerCase();
+  const filtered = (window._members||[]).filter(m =>
+    m.name.toLowerCase().includes(q) ||
+    m.tagline.toLowerCase().includes(q)
+  );
+  renderDir(filtered);
+}
+loadDir();
+</script>
 
 
   <footer role="contentinfo">
@@ -96,7 +98,6 @@
           <span>WDD231 Class Project</span><br>
           Ronald Mullo<br>
           <small>© <span data-year></span> Quito Chamber of Commerce · Last modified: <span data-lastmod></span></small>
-           
         </div>
       </div>
     </div>

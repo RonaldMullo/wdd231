@@ -1,0 +1,111 @@
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        display: none;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .weather-info {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+    
+    .hero {
+        padding: 2rem 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .events {
+        padding: 1rem;
+    }
+    
+    .cta {
+        padding: 2rem 1rem;
+    }
+
+    .hero{ min-height: 38vh; background-position: center top; }
+.hero__content{ padding: 2.25rem 1rem; }
+.hero h1{ font-size: clamp(1.4rem, 5vw + .4rem, 2rem); margin: 0 0 .5rem; }
+.hero p{ margin: 0 0 1rem; font-size: .95rem; }
+.cta{ padding: .65rem .95rem; font-size: .95rem; }
+
+@media (min-width: 600px){
+  .hero{ min-height: 50vh; background-position: center; }
+  .hero__content{ padding: 3rem 1rem; }
+  .hero p{ font-size: 1rem; }
+}
+
+@media (min-width: 900px){
+  .hero{ min-height: 420px; }
+  .hero__content{ padding: 4rem 1rem; }
+  .hero h1{ font-size: clamp(2rem, 1.4vw + 1.6rem, 2.8rem); }
+  .hero p{ font-size: 1.1rem; }
+  .cta{ padding: .75rem 1.1rem; font-size: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+}
+}
