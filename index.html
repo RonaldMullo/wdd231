@@ -1,106 +1,94 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home · Chamber of Commerce</title>
-  <meta name="description" content="Quito Chamber of Commerce - resources, events, business directory, and memberships.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD Portfolio · Ronald Mullo</title>
+  <meta name="description" content="WDD course portfolio with responsive design, accessibility, and modular JavaScript.">
+  <meta name="author" content="Ronald Mullo">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <!-- Google Analytics placeholder -->
-  <script>/* GA slot – replace with your ID gtag('config', 'G-XXXXXXX') */</script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <!-- JS -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
 </head>
 <body>
-  <header class="topbar" role="banner">
-    <div class="container">
-      <a class="brand" href="index.html">
-        <div class="brand__logo" aria-hidden="true">Quito</div>
-        <div class="brand__title">Chamber of Commerce<span><small>City of Quito – Ecuador</small></span></div>
-      </a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-    </div>
-    
-    <nav aria-label="Primary">
-      <ul class="container">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/pic2.png" alt="Site logo" width="40" height="40" />
+      <span class="brand__name">Ronald Mullo · WDD</span>
+    </a>
+    <button id="menu-toggle" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="chamber/">Chamber</a></li>
+        <li><a href="final/">Final</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
-    
   </header>
 
-  
-<main>
-  <section class="hero" aria-label="City of Quito">
-    <div class="hero__content">
-      <h1>Boosting Quito Businesses</h1>
-      <p>Events, networking, and resources to grow your company.</p>
-      <a class="cta" href="#eventos">See upcoming events</a>
-    </div>
-  </section>
+  <main id="main" class="container">
+    <h1>Home</h1>
+    <section aria-labelledby="sec-overview" class="card">
+      <h2 id="sec-overview">Overview</h2>
+      <p>This project applies principles of <strong>proximity, alignment, repetition, and contrast</strong>, with an adaptive navigation (hamburger on mobile, horizontal on desktop) and no frameworks.</p>
+      <ul class="badges">
+        <li>Semantic HTML</li>
+        <li>Responsive CSS</li>
+        <li>Modular JS</li>
+        <li>Accessible</li>
+      </ul>
+    </section>
 
-  <div class="container">
-    <h2 class="section-title" id="eventos">Home</h2>
-    <div class="grid grid-3">
-      <article class="card">
-        <h3>Events</h3>
-        <ul class="list" id="events-list">
-          <li>Loading…</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Current Weather</h3>
-        <div class="weather">
-          <div class="weather__icon" aria-hidden="true">⛅</div>
-          <div>
-            <strong>Quito: 18–20°C</strong><br>
-            <span class="tag">Partly cloudy</span><br>
-            Humidity 54% · Alt. 2,850 m
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <h3>Forecast</h3>
-        <ul class="list" id="forecast-list">
-          <li>Loading…</li>
-        </ul>
-      </article>
-    </div>
-
-    <h3 class="section-title">Featured Businesses</h3>
-    <div class="grid" id="directory-sample"></div>
-  </div>
-</main>
-
-
-  <footer role="contentinfo">
-    <div class="container">
-      <div class="footer-cols">
-        <div>
-          <strong>Quito Chamber of Commerce</strong><br>
-          10 Commerce Street, Quito 170150<br>
-          <a href="mailto:info@camaradequito.ec">info@camaradequito.ec</a><br>
-          <a href="tel:+59325552300">(+593) 2 304-1716</a>
-        </div>
-        <div>
-          <div class="social" aria-label="Social media">
-            <a href="#" aria-label="YouTube">▶</a>
-            <a href="#" aria-label="Twitter">𝕏</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-          </div>
-          <span>WDD231 Class Project</span><br>
-          Ronald Mullo<br>
-          <small>© <span data-year></span> Quito Chamber of Commerce · Last modified: <span data-lastmod></span></small>
-           
-        </div>
+    <section aria-labelledby="sec-cert" class="card">
+      <h2 id="sec-cert">Certificates & Courses</h2>
+      <div class="filters" role="group" aria-label="Filter by subject">
+        <button class="filter-btn" data-filter="ALL" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="WDD">WDD</button>
+        <button class="filter-btn" data-filter="CSE">CSE</button>
       </div>
-    </div>
-  </footer>
+      <div id="courses" class="course-grid" aria-live="polite"></div>
+      <div class="totals">Total credits displayed: <span id="credit-total">0</span></div>
+    </section>
 
-  <script src="scripts/main.js" defer></script>
+    <section aria-labelledby="sec-cta" class="card">
+      <h2 id="sec-cta">Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Chamber of Commerce</h3>
+          <p>Week 2 project with responsive design.</p>
+          <a class="button" href="chamber/">Go to project</a>
+        </article>
+        <article class="project">
+          <h3>Final Project</h3>
+          <p>Integration of everything learned (week 6).</p>
+          <a class="button" href="final/">View progress</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="social">
+      <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.26 1.86 1.26 1.08 1.85 2.84 1.32 3.53 1.01.11-.78.42-1.32.76-1.63-2.67-.3-5.47-1.34-5.47-5.95 0-1.32.47-2.4 1.24-3.25-.12-.3-.54-1.52.12-3.17 0 0 1.02-.33 3.34 1.24a11.5 11.5 0 0 1 6.08 0c2.32-1.57 3.34-1.24 3.34-1.24.66 1.65.24 2.87.12 3.17.77.85 1.24 1.93 1.24 3.25 0 4.62-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z" fill="currentColor"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="24" height="24"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1.01 1.82-2.2 3.75-2.2 4 0 4.74 2.63 4.74 6.05V24h-4v-5.6c0-1.34-.03-3.07-1.87-3.07-1.88 0-2.17 1.46-2.17 2.97V24h-4V8z" fill="currentColor"/></svg>
+      </a>
+    </div>
+    <p>© <span id="currentyear"></span> · Ronald Mullo · Ecuador</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>

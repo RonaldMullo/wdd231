@@ -1,0 +1,10 @@
+@media (min-width:680px){
+  .hamburger{display:none;}
+  .site-nav{position:static;translate:none;background:transparent;border:0;}
+  .site-nav ul{display:flex;gap:.5rem;padding:0;}
+  .course-grid{grid-template-columns:repeat(2,1fr);}
+  .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;}
+}
+@media (min-width:980px){
+  .course-grid{grid-template-columns:repeat(3,1fr);}
+}

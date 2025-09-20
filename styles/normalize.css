@@ -1,0 +1,5 @@
+/* normalize.css */
+*, *::before, *::after { box-sizing: border-box; }
+body, h1, h2, h3, p, ul, li, figure { margin: 0; padding: 0; }
+img, picture { max-width: 100%; display: block; }
+body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
