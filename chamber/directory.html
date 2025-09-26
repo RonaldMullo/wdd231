@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Quito Chamber of Commerce | Directory</title>
+  <meta name="description" content="Resource center for businesses in Quito: business directory, events, networking, and local shopping." />
+  <meta name="author" content="Ronald Mullo" />
+
+  
+  <link rel="icon" href="./images/quito1.webp" type="image/webp+xml" />
+
+  <!--  Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Quito Chamber of Commerce" />
+  <meta property="og:description" content="Business directory, events, and networking opportunities in Quito, Ecuador." />
+  
+  <meta property="og:url" content="https://ronaldmullo.github.io/wdd231/chamber/directory.html" />
+  
+  <meta property="og:image" content="https://ronaldmullo.github.io/wdd231/chamber/images/og-quito2.jpg" />
+
+  <!-- CSS: always normalize first -->
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a class="logo" href="./directory.html" aria-label="Quito Chamber of Commerce">
+        
+        <img src="./images/quito1.webp" alt="Quito Chamber of Commerce logo" />
+        <span>Quito Chamber of Commerce</span>
+      </a>
+    </div>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      ☰
+    </button>
+
+    <nav id="primary-nav" class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Discover</a></li>
+        <li><a class="active" href="./directory.html">Business Directory</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Podcast</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Member Directory</h1>
+
+    <div class="view-switch">
+      <button id="gridBtn" class="is-active" type="button" aria-pressed="true">Grid</button>
+      <button id="listBtn" type="button" aria-pressed="false">List</button>
+    </div>
+
+   
+    <section id="memberDisplay" class="cards grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-info">
+      <p><strong>Quito Chamber of Commerce</strong><br>
+        La Armenia Av. Nel Quinta - Martinez Alvarez, Quito, EC <br>
+        <a href="mailto:info@quitochamber.org">info@quitochamber.org</a> · (02) 3041716
+      </p>
+    </div>
+
+    <div class="footer-meta">
+      <p>WDD 231 · Class Project · Developed by Ronald Mullo</p>
+      <p>© <span id="year"></span> Quito Chamber of Commerce · Last modified: <span id="lastmod"></span></p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="./scripts/main.js" defer></script>
+  <script src="./scripts/directory.js" defer></script>
+</body> 
+</html>
