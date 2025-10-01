@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Quito Coffee Roasters",
+    "tagline": "High-altitude coffee",
+    "address": "Av. Amazonas N34-321, Quito",
+    "phone": "+593 2 123 4567",
+    "email": "hello@quitocoffee.ec",
+    "url": "https://quitocoffee.ec",
+    "logo": "coffe.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Andes Tech Solutions",
+    "tagline": "Digital development",
+    "address": "República E7-77 and Eloy Alfaro, Quito",
+    "phone": "+593 2 555 1122",
+    "email": "contact@andestech.ec",
+    "url": "https://andestech.ec",
+    "logo": "tech.webp",
+    "membership": 2
+  },
+  {
+    "name": "La Ronda Market",
+    "tagline": "Local handicrafts",
+    "address": "La Ronda Street Oe-123, Historic Center",
+    "phone": "+593 98 222 3344",
+    "email": "sales@laronda.ec",
+    "url": "https://laronda.ec",
+    "logo": "ronda.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Páramo Outdoor",
+    "tagline": "Mountain gear",
+    "address": "Av. Orellana and 6 de Diciembre, Quito",
+    "phone": "+593 99 555 7788",
+    "email": "info@paramo.ec",
+    "url": "https://paramo.ec",
+    "logo": "paramo.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Chakana Studio",
+    "tagline": "Design & Branding",
+    "address": "González Suárez N27-90, Quito",
+    "phone": "+593 98 765 4321",
+    "email": "hello@chakana.studio",
+    "url": "https://chakana.studio",
+    "logo": "desing.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Quiteña Bakery",
+    "tagline": "Fresh bread every day",
+    "address": "Av. De los Shyris N34-180, Quito",
+    "phone": "+593 2 246 8899",
+    "email": "sales@qp.ec",
+    "url": "https://qp.ec",
+    "logo": "bakery.webp",
+    "membership": 3
+  },
+  {
+    "name": "Yaku Tours",
+    "tagline": "Travel through Ecuador",
+    "address": "Av. Colón E10-21, Quito",
+    "phone": "+593 99 101 2020",
+    "email": "info@yaku.tours",
+    "url": "https://yaku.tours",
+    "logo": "yaku.jpg",
+    "membership": 2
+  }
+]

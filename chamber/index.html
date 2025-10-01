@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quito Chamber of Commerce | Home</title>
+  <meta name="description" content="Welcome to the Quito Chamber of Commerce — connect, grow, and thrive with local businesses, events, and resources." />
+  <meta name="author" content="Ronald Mullo" />
+
+  <link rel="icon" href="./images/quito1.webp" type="image/quito1" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Quito Chamber of Commerce" />
+  <meta property="og:description" content="Business networking, events, member directory, and resources in Quito, Ecuador." />
+  <meta property="og:image" content="https://ronaldmullo.github.io/wdd231/chamber/images/og-quito2.jpg" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+
+  <style>
+    /* Home-only tweaks */
+    .hero {
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      display: grid; place-items: center; min-height: clamp(220px, 45vh, 520px);
+      background: #0b3954 url('./images/quito1.webp') center/cover no-repeat;
+      color: #fff; margin: 1rem 0;  
+    }
+    .hero::after{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.45)); }
+    .hero .hero-content{ position:relative; text-align:center; padding: clamp(1rem, 3vw, 2rem); }
+    .hero h1{ margin:0 0 .5rem; font-size: clamp(1.6rem, 3.5vw, 2.4rem); color:#fff; }
+    .hero p{ margin:.25rem auto 1rem; max-width: 60ch; color:#f0f3f9; }
+    .hero .cta{ display:inline-block; background: var(--color-primary); color:#fff; text-decoration:none; font-weight:700;
+      padding:.7rem 1rem; border-radius: 999px; border: 2px solid transparent; }
+
+    .home-grid{ display:grid; gap: var(--gap); }
+    @media (min-width: 900px){ .home-grid{ grid-template-columns: 1.15fr .85fr; align-items: start; } }
+
+    .card.section{ padding:1rem; }
+    .section h2{ margin-top:0; }
+
+    
+    .weather-wrap{ display:grid; gap: .75rem; }
+    .current-weather{ display:flex; align-items:center; gap:.75rem; }
+    .current-weather .temp{ font-size: 2.2rem; font-weight: 800; }
+    .forecast{ display:grid; grid-template-columns: repeat(3, 1fr); gap:.5rem; }
+    .forecast .day{ border:1px solid #e5e7eb; border-radius: 10px; padding:.6rem; text-align:center; background:#fff; }
+
+   
+    .spotlights{ display:grid; gap:var(--gap); }
+    @media (min-width:720px){ .spotlights{ grid-template-columns: repeat(3, 1fr); } }
+    .spot-card{ background:#fff; border:1px solid #e5e7eb; border-radius: var(--radius); padding:1rem; display:grid; gap:.5rem; }
+    .spot-card header{ display:flex; align-items:center; gap:.6rem; }
+    .spot-card img{ width:56px; height:56px; border-radius: 10px; object-fit: cover; border:1px solid #e5e7eb; }
+    .spot-card .tier{ font-size:.85rem; color: var(--color-muted); }
+    .spot-card a{ color: var(--color-primary); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a class="logo" href="./index.html" aria-label="Quito Chamber of Commerce">
+        <img src="./images/quito1.webp" alt="Quito Chamber logo" />
+        <span>Quito Chamber of Commerce</span>
+      </a>
+    </div>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+
+    <nav id="primary-nav" class="nav">
+      <ul>
+        <li><a class="active" href="./index.html">Home</a></li>
+        <li><a href="#">Discover</a></li>
+        <li><a href="./directory.html">Business Directory</a></li>
+        <li><a href="./join.html">Join</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Podcast</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" aria-label="Welcome banner">
+      <div class="hero-content">
+        <h1>Connect. Grow. Thrive.</h1>
+        <p>Welcome to the Quito Chamber of Commerce. We help businesses make meaningful connections, access trusted resources, and create a stronger local economy.</p>
+        <a class="cta" href="./join.html">Join the Chamber</a>
+      </div>
+    </section>
+
+    
+    <div class="home-grid">
+      <section class="card section" aria-labelledby="events-title">
+        <h2 id="events-title">Upcoming Events</h2>
+        <ul id="events-list">
+          <li><strong>First Friday Networking</strong> — Oct 4, 6:00 PM · La Floresta Co‑Work</li>
+          <li><strong>SME Finance Clinic</strong> — Oct 10, 9:00 AM · Chamber HQ</li>
+          <li><strong>Local Makers Market</strong> — Oct 19, 10:00 AM · Parque Carolina</li>
+        </ul>
+        <p style="margin-top:.5rem"><a href="#">See all events</a></p>
+      </section>
+
+      <section class="card section" aria-labelledby="weather-title">
+        <h2 id="weather-title">Quito Weather</h2>
+        <div class="weather-wrap">
+          <div class="current-weather" aria-live="polite">
+            <div class="temp" id="weather-temp">--°C</div>
+            <div>
+              <div id="weather-desc">Loading...</div>
+              <div id="weather-extra" class="tier"></div>
+            </div>
+          </div>
+          <div class="forecast" id="forecast" aria-label="3‑day forecast"></div>
+        </div>
+      </section>
+
+      <section class="card section" style="grid-column: 1 / -1" aria-labelledby="spot-title">
+        <h2 id="spot-title">Member Spotlights</h2>
+        <div class="spotlights" id="spotlights" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-info">
+      <p><strong>Quito Chamber of Commerce</strong><br>
+        La Armenia Av. Nel Quinta - Martinez Alvarez, Quito, EC <br>
+        <a href="mailto:info@quitochamber.org">info@quitochamber.org</a> · (02) 3041716
+      </p>
+    </div>
+    <div class="footer-meta">
+      <p>WDD 231 · Class Project · Developed by Ronald Mullo</p>
+      <p>© <span id="year"></span> Quito Chamber of Commerce · Last modified: <span id="lastmod"></span></p>
+    </div>
+  </footer>
+ 
+  <script src="./scripts/config.js"></script>
+  <script src="./scripts/weather.js" defer></script>
+  <script>
+  
+  (async function(){
+    const container = document.getElementById('spotlights');
+    try{
+      
+      let res = await fetch('./data/members.json');
+      if(!res.ok) res = await fetch('./members.json');
+      if(!res.ok) throw new Error('Members JSON not found');
+      const members = await res.json();
+      const premium = members.filter(m => Number(m.membership) === 2 || Number(m.membership) === 3);
+      for(let i=premium.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [premium[i], premium[j]]=[premium[j], premium[i]]; }
+      const count = Math.min(3, Math.max(2, premium.length));
+      const picks = premium.slice(0, count);
+      container.innerHTML = '';
+      for(const m of picks){
+        const card = document.createElement('article');
+        card.className = 'spot-card';
+        const logo = m.logo?.startsWith('./') || m.logo?.startsWith('http') ? m.logo : `./images/${m.logo || 'quito1.webp'}`;
+        const level = Number(m.membership) === 3 ? 'Gold' : Number(m.membership) === 2 ? 'Silver' : 'Member';
+        const phone = m.phone || '';
+        const address = m.address || '';
+        const website = m.url || m.website || '#';
+        const email = m.email || '';
+        card.innerHTML = `
+          <header>
+            <img src="${logo || './images/quito.webp'}" alt="${m.name || 'Member'} logo" loading="lazy" />
+            <div>
+              <h3 style="margin:0">${m.name || 'Chamber Member'}</h3>
+              <div class="tier">${level}</div>
+            </div>
+          </header>
+          <div class="meta">${address}</div>
+          <div class="meta">${phone}</div>
+          <a href="${website}" target="_blank" rel="noopener">${website}</a>
+          ${email ? `<div class="meta"><a href="mailto:${email}">${email}</a></div>` : ''}
+        `;
+        container.appendChild(card);
+      }
+    }catch(err){
+      container.innerHTML = '<p class="tier">Spotlights unavailable. Please verify members.json</p>';
+      console.error(err);
+    }
+  })();
+  </script>
+</body>
+</html>

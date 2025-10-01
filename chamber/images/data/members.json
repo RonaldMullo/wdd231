@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Quito Coffee Roasters",
+    "tagline": "High-altitude coffee",
+    "email": "hola@quitocoffee.ec",
+    "phone": "+593-2-123-4567",
+    "url": "https://example.com",
+    "logo": "https://www.clave.com.ec/wp-content/uploads/2015/05/mg_7093.jpg"
+  },
+  {
+    "name": "Andes Tech",
+    "tagline": "Digital solutions",
+    "email": "contacto@andestech.ec",
+    "phone": "+593-2-555-1122",
+    "url": "https://example.com",
+    "logo": "https://www.quitoinforma.gob.ec/wp-content/uploads/2022/12/Equipos-tecnologicos-RP-800x445.jpg"
+  },
+  {
+    "name": "Mercado La Ronda",
+    "tagline": "Local handicrafts",
+    "email": "ventas@laronda.ec",
+    "phone": "+593-2-987-6543",
+    "url": "https://example.com",
+    "logo": "https://marketingsimulator.net/mhernandez/wp-content/uploads/sites/140/2016/06/La-Ronda-672x372.jpg"
+  },
+  {
+    "name": "Quito Legal",
+    "tagline": "Law firm",
+    "email": "info@quitolegal.ec",
+    "phone": "+593-2-800-1212",
+    "url": "https://example.com",
+    "logo": "https://media.elcomercio.com/wp-content/uploads/2021/08/1-8-700x391.jpg"
+  }
+]
