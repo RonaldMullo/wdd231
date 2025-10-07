@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You — Quito Chamber</title>
+  <meta name="description" content="Thanks for joining the chamber." />
+  <link rel="icon" href="./images/quito1.webp" type="image/webp+xml" />
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <style>
+    .kv{ background:#fff; border:1px solid #e5e7eb; border-radius:var(--radius); padding:1rem; display:grid; gap:.6rem; }
+    .kv div{ display:grid; grid-template-columns:180px 1fr; gap:.5rem; }
+    .kv strong{ color:var(--color-muted); font-weight:600; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a class="logo" href="./index.html" aria-label="Quito Chamber of Commerce">
+        <img src="./images/quito1.webp" alt="Quito Chamber of Commerce logo" />
+        <span>Quito Chamber of Commerce</span>
+      </a>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <nav id="primary-nav" class="nav">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./directory.html">Business Directory</a></li>
+        <li><a class="active" href="./join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Thank you for joining!</h1>
+    <p>We received your application. Below is a summary of the required fields you submitted.</p>
+
+    <section class="kv" aria-live="polite">
+      <div><strong>First name</strong><span id="outFirst"></span></div>
+      <div><strong>Last name</strong><span id="outLast"></span></div>
+      <div><strong>Email</strong><span id="outEmail"></span></div>
+      <div><strong>Mobile</strong><span id="outMobile"></span></div>
+      <div><strong>Business/Organization</strong><span id="outOrg"></span></div>
+      <div><strong>Timestamp</strong><span id="outTs"></span></div>
+    </section>
+
+    <p style="margin-top:1rem"><a class="cta" href="./index.html">Return to Home</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-info">
+      <p><strong>Quito Chamber of Commerce</strong><br>
+        La Armenia Av. Nela Quinta - Martinez Alvarez, Quito, EC <br>
+        <a href="mailto:info@quitochamber.org">info@quitochamber.org</a> · (02) 3041716
+      </p>
+    </div>
+    <div class="footer-meta">
+      <p>WDD 231 · Class Project · Developed by Ronald Mullo</p>
+      <p>© <span id="year"></span> Quito Chamber of Commerce · Last modified: <span id="lastmod"></span></p>
+    </div>
+  </footer>
+
+  <script src="./scripts/main.js" defer></script>
+  <script src="./scripts/thankyou.js" defer></script>
+</body>
+</html>
