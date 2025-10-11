@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Plan - Terrasol Communities</title>
+
+  <!-- Typography (2 fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Color scheme (use exclusively in this document) */
+      --primary:#2c6e49;   
+      --accent:#f0e6d6;  
+      --text:#1f2937;      
+      --bg:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',sans-serif;line-height:1.6}
+    header{
+      background:var(--primary);
+      color:white;
+      padding:2rem 1.25rem;
+      text-align:center;
+    }
+    h1,h2,h3{
+      font-family:Poppins,Inter,system-ui,Arial,Helvetica,sans-serif;
+      line-height:1.25;
+      margin:0 0 0.5rem 0;
+    }
+    h1{font-size:clamp(1.6rem,2.5vw,2.2rem)}
+    h2{font-size:clamp(1.25rem,2.2vw,1.8rem); margin-top:2rem}
+    h3{font-size:clamp(1.05rem,1.8vw,1.25rem); margin-top:1.25rem}
+    .container{max-width:1000px;margin:0 auto;padding:1.25rem}
+    .grid{display:grid;gap:1rem}
+    .two{grid-template-columns:1fr}
+    @media(min-width:800px){.two{grid-template-columns:1fr 1fr}}
+    .card{
+      background:var(--accent);
+      border:1px dashed var(--primary);
+      padding:1rem 1rem 0.75rem 1rem;
+      border-radius:14px;
+    }
+    .chip{display:inline-block;background:var(--primary);color:#fff;padding:0.25rem 0.6rem;border-radius:999px;font-size:0.85rem;font-weight:600;letter-spacing:.3px}
+    code.kbd{background:rgba(44,110,73,.12);border:1px solid rgba(44,110,73,.25);padding:.1rem .35rem;border-radius:.35rem;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    .palette{display:flex;gap:1rem;align-items:center;margin:.5rem 0 0.25rem 0}
+    .swatch{width:70px;height:36px;border-radius:8px;border:2px solid rgba(0,0,0,.08)}
+    .swatch.primary{background:var(--primary)}
+    .swatch.accent{background:var(--accent)}
+    .usage li{margin-bottom:.25rem}
+    .typo-samples p{margin:.25rem 0}
+    .typo-samples .h{font-family:Poppins,Inter,system-ui,Arial,Helvetica,sans-serif;font-weight:700}
+    .typo-samples .b{font-family:Inter,system-ui,Arial,Helvetica,sans-serif}
+    .testlist li{margin:.35rem 0}
+    /* Wireframes */
+    .wf{display:block;width:100%;height:auto;border:1px solid rgba(0,0,0,.08);border-radius:12px;background:#fff}
+    figure{margin:0}
+    figcaption{font-size:.95rem;margin-top:.35rem;color:#374151}
+    .legend{font-size:.85rem;margin-top:.25rem}
+    .kbd{font-size:.85rem}
+    footer{margin:2rem 0 3rem 0;text-align:center;font-size:.9rem;color:#4b5563}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Site Plan - <span class="chip">Your Space, Your Home, Your Lifestyle</span></h1>
+    <p>Planning document for the Terrasol portfolio website (Terrasol&nbsp;1 &amp; Terrasol&nbsp;2).</p>
+  </header>
+
+  <main class="container">
+    <!-- Site Name -->
+    <section>
+      <h2>Site Name</h2>
+      <div class="card">
+        <h3>Terrasol Communities</h3>
+        <p><strong>Reason for selection:</strong> The name groups a vision of modern communities in harmony with nature and a path from lot selection to home design and construction.</p>
+        <p><strong>Optional domain:</strong> <code class="kbd">terrasol-communities.ec</code> or <code class="kbd">terrasol-living.com</code></p>
+      </div>
+    </section>
+
+    <!-- Purpose -->
+    <section>
+      <h2>Site Purpose</h2>
+      <div class="card">
+        <p>The site will serve as a hub to present the <em>Terrasol 1</em> and <em>Terrasol 2</em> developments, describing amenities, lot availability (starting at 114&nbsp;m²), integrated services (architectural design and construction), and calls‑to‑action such as “Schedule a Visit” or “Request Brochure.” It will include an inspiring homepage hero (“Your Canvas in Nature Awaits”), a projects portfolio, services, gallery, about, and contact.</p>
+      </div>
+    </section>
+
+    <!-- Scenarios -->
+    <section>
+      <h2>Scenarios (Target Audience Questions)</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Scenario 1</h3>
+          <p>“What are the key differences between Terrasol&nbsp;1 and Terrasol&nbsp;2 (e.g., pool, green areas, walking trails)?”</p>
+        </div>
+        <div class="card">
+          <h3>Scenario 2</h3>
+          <p>“What is the minimum lot size and which basic services are included?”</p>
+        </div>
+        <div class="card">
+          <h3>Scenario 3</h3>
+          <p>“Can I hire the home design and construction directly with you for a turnkey solution?”</p>
+        </div>
+        <div class="card">
+          <h3>Scenario 4</h3>
+          <p>“How do I book a site tour or request a digital brochure?”</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color Schema -->
+    <section>
+      <h2>Color Schema</h2>
+      <div class="card">
+        <div class="palette">
+          <div class="swatch primary" title="--primary"></div>
+          <div>
+            <strong>Primary</strong> <code class="kbd">#2c6e49</code><br>
+            Usage: headings, borders, accents.
+          </div>
+        </div>
+        <div class="palette">
+          <div class="swatch accent" title="--accent"></div>
+          <div>
+            <strong>Accent</strong> <code class="kbd">#f0e6d6</code><br>
+            Usage: card backgrounds, labels, highlighted blocks.
+          </div>
+        </div>
+        <ul class="usage">
+          <li>This very document applies the selected color scheme.</li>
+          <li>Avoid additional colors except grayscale for text.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section>
+      <h2>Typography</h2>
+      <div class="card">
+        <p><strong>Selected fonts:</strong> <em>Poppins</em> (headings) and <em>Inter</em> (body).</p>
+        <div class="typo-samples">
+          <p class="h" style="font-size:1.3rem">Heading sample with Poppins</p>
+          <p class="b">Body paragraph sample with Inter. This pairing prioritizes legibility and clear hierarchy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wireframes -->
+    <section>
+      <h2>Wireframe (Home Page)</h2>
+      <div class="grid two">
+        <figure class="card">
+          <svg class="wf" viewBox="0 0 375 700" role="img" aria-label="Mobile wireframe">
+            <rect x="10" y="10" width="355" height="60" fill="none" stroke="black" stroke-dasharray="6 6" rx="8"/>
+            <text x="20" y="45" font-size="14">Header / Logo</text>
+
+            <rect x="10" y="80" width="355" height="130" fill="none" stroke="black" stroke-dasharray="6 6" rx="8"/>
+            <text x="20" y="150" font-size="14">Hero “Your Canvas in Nature Awaits”</text>
+
+            <rect x="10" y="220" width="355" height="110" fill="none" stroke="black" stroke-dasharray="6 6" rx="8"/>
+            <text x="20" y="280" font-size="14">Featured Projects (Terrasol 1 / 2)</text>
+
+            <rect x="10" y="345" width="355" height="90" fill="none" stroke="black" stroke-dasharray="6 6" rx="8"/>
+            <text x="20" y="395" font-size="14">Services</text>
+
+            <rect x="10" y="445" width="355" height="90" fill="none" stroke="black" stroke-dasharray="6 6" rx="8"/>
+            <text x="20" y="495" font-size="14">Gallery</text>
+
+            <rect x="10" y="545" width="355" height="70" fill="none" stroke="black" stroke-dasharray="6 6" rx="8"/>
+            <text x="20" y="585" font-size="14">About</text>
+
+            <rect x="10" y="625" width="355" height="60" fill="none" stroke="black" stroke-dasharray="6 6" rx="8"/>
+            <text x="20" y="660" font-size="14">Contact / CTA</text>
+          </svg>
+          <figcaption>Mobile view (~375px).</figcaption>
+          <p class="legend">Blocks: Header, Hero, Projects, Services, Gallery, About, Contact/CTA.</p>
+        </figure>
+
+        <figure class="card">
+          <svg class="wf" viewBox="0 0 1000 680" role="img" aria-label="Desktop wireframe">
+            <rect x="20" y="20" width="960" height="70" fill="none" stroke="black" stroke-dasharray="6 6" rx="10"/>
+            <text x="35" y="60" font-size="16">Header / Nav</text>
+
+            <rect x="20" y="110" width="580" height="170" fill="none" stroke="black" stroke-dasharray="6 6" rx="10"/>
+            <text x="35" y="200" font-size="16">Hero + Headline</text>
+
+            <rect x="620" y="110" width="360" height="170" fill="none" stroke="black" stroke-dasharray="6 6" rx="10"/>
+            <text x="635" y="200" font-size="16">Featured Image</text>
+
+            <rect x="20" y="300" width="960" height="120" fill="none" stroke="black" stroke-dasharray="6 6" rx="10"/>
+            <text x="35" y="365" font-size="16">Project Cards (Terrasol 1 / 2)</text>
+
+            <rect x="20" y="440" width="470" height="100" fill="none" stroke="black" stroke-dasharray="6 6" rx="10"/>
+            <text x="35" y="500" font-size="16">Services</text>
+
+            <rect x="510" y="440" width="470" height="100" fill="none" stroke="black" stroke-dasharray="6 6" rx="10"/>
+            <text x="525" y="500" font-size="16">Gallery</text>
+
+            <rect x="20" y="560" width="660" height="90" fill="none" stroke="black" stroke-dasharray="6 6" rx="10"/>
+            <text x="35" y="615" font-size="16">About</text>
+
+            <rect x="700" y="560" width="280" height="90" fill="none" stroke="black" stroke-dasharray="6 6" rx="10"/>
+            <text x="715" y="615" font-size="16">Contact / CTA</text>
+          </svg>
+          <figcaption>Desktop view (≥1000px).</figcaption>
+          <p class="legend">Responsive layout with visual emphasis on the hero and side‑by‑side project comparison.</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CSS note -->
+    <section>
+      <h2>CSS &amp; Applying the Scheme</h2>
+      <div class="card">
+        <p>This document already applies the defined color scheme and typography. For the final project, you can extract these rules to <code class="kbd">styles/site.css</code> and reuse them across the site.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Site plan created for academic purposes.</p>
+  </footer>
+</body>
+</html>
