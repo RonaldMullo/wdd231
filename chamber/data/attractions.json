@@ -1,0 +1,66 @@
+[
+  {
+    "id": "centro-historico",
+    "name": "Centro Histórico de Quito",
+    "address": "Centro Histórico, Quito",
+    "description": "UNESCO World Heritage Site with colonial plazas, museums, and landmark churches.",
+    "image": "./images/centro-historico.webp",
+    "url": "#"
+  },
+  {
+    "id": "la-basilica",
+    "name": "La Basilica",
+    "address": "Calle Carchi & Venezuela, Quito",
+    "description": "The Basilica of the National Vow, located in the historic center of Quito, is the largest neo-Gothic temple in the Americas. Its construction, which began in 1892, is characterized by the replacement of traditional gargoyles with animals from Ecuadorian fauna.",
+    "image": "./images/la-basilica.webp",
+    "url": "#"
+  },
+  {
+    "id": "san-francisco",
+    "name": "Iglesia de San Francisco",
+    "address": "Plaza San Francisco, Quito",
+    "description": "16th-century Franciscan complex featuring baroque chapels, cloisters, and a museum.",
+    "image": "./images/san-francisco.webp",
+    "url": "#"
+  },
+  {
+    "id": "compania-jesus",
+    "name": "Iglesia de la Compañía de Jesús",
+    "address": "García Moreno & Sucre, Quito",
+    "description": "Sumptuous baroque church known for its gilded interior crafted in gold leaf.",
+    "image": "./images/compania-jesus.webp",
+    "url": "#"
+  },
+  {
+    "id": "mitad-del-mundo",
+    "name": "Mitad del Mundo",
+    "address": "Ciudad Mitad del Mundo, San Antonio de Pichincha",
+    "description": "Monument and interactive museums marking latitude 0° at the equator.",
+    "image": "./images/mitad-del-mundo.webp",
+    "url": "#"
+  },
+  {
+    "id": "teleferiqo",
+    "name": "TelefériQo Quito",
+    "address": "Av. Occidental (base station), Quito",
+    "description": "Cable car to Cruz Loma with city and volcano vistas; access to high-altitude trails.",
+    "image": "./images/teleferiqo.webp",
+    "url": "#"
+  },
+  {
+    "id": "itchimbia",
+    "name": "Parque Itchimbía & Centro Cultural",
+    "address": "Parque Itchimbía, Quito",
+    "description": "Hillside park with the glass-and-iron Crystal Palace and sweeping views of the Old Town.",
+    "image": "./images/itchimbia.webp",
+    "url": "#"
+  },
+  {
+    "id": "parque-metropolitano",
+    "name": "Parque Metropolitano Guangüiltagua",
+    "address": "Av. De los Granados, Quito",
+    "description": "One of South America’s largest urban parks—running trails, picnic areas, and native forest.",
+    "image": "./images/parque-metropolitano.webp",
+    "url": "#"
+  }
+]
