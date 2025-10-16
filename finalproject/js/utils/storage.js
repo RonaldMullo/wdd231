@@ -1,5 +1,5 @@
-// js/utils/storage.js
-const PREFIX = 'ts:'; // Terrasol / tu proyecto
+
+const PREFIX = 'ts:'; 
 function safeStorage() {
   try {
     const testKey = '__storagetest__';
@@ -7,7 +7,7 @@ function safeStorage() {
     localStorage.removeItem(testKey);
     return localStorage;
   } catch {
-    // Fallback no-op (SSR o storage bloqueado)
+    
     return {
       getItem: () => null,
       setItem: () => {},
@@ -23,7 +23,7 @@ const ls = safeStorage();
 function k(key) { return `${PREFIX}${key}`; }
 
 export const storage = {
-  /** Lee y parsea JSON si es posible; si falla, retorna el string crudo. */
+  
   get(key, fallback = null) {
     try {
       const raw = ls.getItem(k(key));
@@ -31,7 +31,7 @@ export const storage = {
       try {
         return JSON.parse(raw);
       } catch {
-        // No era JSON; devuelve valor tal cual (útil si guardaste strings simples)
+       
         return raw;
       }
     } catch {
@@ -39,7 +39,7 @@ export const storage = {
     }
   },
 
-  /** Guarda como JSON. Retorna true si se pudo persistir. */
+  
   set(key, value) {
     try {
       ls.setItem(k(key), JSON.stringify(value));
@@ -49,17 +49,17 @@ export const storage = {
     }
   },
 
-  /** Elimina una clave. */
+  
   remove(key) {
     try { ls.removeItem(k(key)); } catch {}
   },
 
-  /** ¿Existe la clave? */
+  
   has(key) {
     try { return ls.getItem(k(key)) !== null; } catch { return false; }
   },
 
-  /** Limpia solo las claves con el PREFIJO (no todo el localStorage). */
+  
   clear() {
     try {
       const toDelete = [];
@@ -71,7 +71,7 @@ export const storage = {
     } catch {}
   },
 
-  /** Lista las claves (sin el prefijo). */
+  
   keys() {
     const out = [];
     try {
