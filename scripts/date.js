@@ -1,1 +1,2 @@
-const y=document.querySelector('#currentyear');if(y){y.textContent=String(new Date().getFullYear());}const m=document.querySelector('#lastModified');if(m){m.textContent=`Last modified: ${document.lastModified}`;}
+const y=document.querySelector('#currentyear');if(y){y.textContent=String(new Date().getFullYear());}
+const m=document.querySelector('#lastModified');if(m){m.textContent=`Last modified: ${document.lastModified}`;}
