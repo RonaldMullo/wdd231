@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Contact | Schedule a Site Visit</title>
+  <meta name="description" content="Get in touch to request a brochure or schedule a site visit to Terrasol communities." />
+  <meta name="author" content="Ronald Mullo" />
+
+  <link rel="icon" href="images/terrasol.svg" type="image/svg+xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact Terrasol" />
+  <meta property="og:description" content="We’ll help you design and build your future home." />
+  <meta property="og:image" content="images/terrasol1.webp" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="module" src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="./">
+      <img src="images/logo-terrasol.svg" alt="Terrasol logo" width="120" height="28">
+    </a>
+
+    <button id="nav-toggle" class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" data-nav="index">Home</a></li>
+        <li><a href="projects.html" data-nav="projects">Projects</a></li>
+        <li><a href="contact.html" data-nav="contact" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">🌓</button>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Request a Visit or Brochure</h1>
+
+    <form class="card" method="get" action="thankyou.html" autocomplete="on" novalidate>
+      <div class="grid">
+        <label>First name
+          <input name="first" type="text" title="First name" autocomplete="given-name" required>
+        </label>
+
+        <label>Last name
+          <input name="last" type="text" title="Last name" autocomplete="family-name" required>
+        </label>
+
+        <label>Organization title
+          <input name="orgtitle" type="text" title="Organization title" autocomplete="organization-title" pattern="[A-Za-z\-\\s]{7,}" placeholder="e.g., Project Manager">
+        </label>
+
+        <label>Email
+          <input name="email" type="email" title="Email" autocomplete="email" required>
+        </label>
+
+        <label>Phone
+          <input name="tel" type="tel" title="Phone" autocomplete="tel">
+        </label>
+
+        <label>Preferred Project
+          <select name="project" title="Preferred project">
+            <option>Terrasol 1</option>
+            <option>Terrasol 2</option>
+          </select>
+        </label>
+
+        <label>Visit date
+          <input name="date" type="date" title="Proposed visit date">
+        </label>
+
+        <label>Message
+          <textarea name="message" rows="4" title="Message" placeholder="Tell us what you’re envisioning..."></textarea>
+        </label>
+      </div>
+
+      <button class="btn" type="submit">Send</button>
+    </form>
+
+    <figure class="teaser">
+      <img src="images/hero.webp" alt="Green spaces and walking trails" width="1200" height="675" loading="lazy" />
+      <figcaption>Expansive green areas, walking trails, and BBQ zones.</figcaption>
+    </figure>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Terrasol Communities - Ronald Mullo</p>
+    <nav aria-label="Footer">
+      <a href="attributions.html">Attributions</a>
+    </nav>
+  </footer>
+</body>
+</html>

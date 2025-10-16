@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Projects | Terrasol 1 & Terrasol 2 Lots and Amenities</title>
+  <meta name="description" content="Explore available lots starting at 114 m² across Terrasol 1 and Terrasol 2 with amenities, pricing, and availability." />
+  <meta name="author" content="Ronald Mullo" />
+
+  <link rel="icon" href="images/terrasol.svg" type="image/svg+xml" />
+
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Terrasol Projects" />
+  <meta property="og:description" content="Compare communities, lots, and amenities. Save your preferences." />
+  <meta property="og:image" content="images/hero.webp" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="module" src="js/main.js" defer></script>
+  <script type="module" src="js/projects.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="./">
+      <img src="images/logo-terrasol.svg" alt="Terrasol logo" width="120" height="28">
+    </a>
+
+    <button id="nav-toggle" class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" data-nav="index">Home</a></li>
+        <li><a href="projects.html" data-nav="projects" aria-current="page">Projects</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">🌓</button>
+  </header>
+
+  <main id="main" class="container">
+    <header class="page-header">
+      <h1>Terrasol Projects</h1>
+      <p class="muted">
+        Lots start at <strong>114 m²</strong>, with utilities, trails, BBQ zones, and more.
+        Terrasol 1 includes a pool; Terrasol 2 focuses on tranquility.
+      </p>
+    </header>
+
+    <section class="controls" aria-label="Filters and preferences">
+      <label>
+        View:
+        <select id="view-select" aria-label="Select view preference">
+          <option value="grid">Grid</option>
+          <option value="list">List</option>
+        </select>
+      </label>
+
+      <label>
+        Project:
+        <select id="project-filter" aria-label="Filter by project">
+          <option value="all">All</option>
+          <option value="Terrasol 1">Terrasol 1</option>
+          <option value="Terrasol 2">Terrasol 2</option>
+        </select>
+      </label>
+
+      <label>
+        Min size (m²):
+        <input type="number" id="min-size" min="0" step="1" placeholder="114" />
+      </label>
+
+      <label>
+        Status:
+        <select id="status-filter" aria-label="Filter by status">
+          <option value="all">All</option>
+          <option value="available">Available</option>
+          <option value="reserved">Reserved</option>
+          <option value="sold">Sold</option>
+        </select>
+      </label>
+
+      <button id="apply-filters" class="btn small">Apply</button>
+      <button id="reset-filters" class="btn small outline">Reset</button>
+    </section>
+
+    <section id="listing" class="cards" aria-live="polite"></section>
+  </main>
+
+  <!-- Modal -->
+  <dialog id="detail-modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <form method="dialog">
+      <header class="modal-header">
+        <h2 id="modal-title">Lot Details</h2>
+        <button class="icon-btn" aria-label="Close">✕</button>
+      </header>
+
+      <div id="modal-content" class="modal-content"></div>
+
+      <footer class="modal-footer">
+        <button class="btn" value="close">Close</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Terrasol Communities - Ronald Mullo</p>
+    <nav aria-label="Footer">
+      <a href="attributions.html">Attributions</a>
+    </nav>
+  </footer>
+</body>
+</html>

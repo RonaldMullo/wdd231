@@ -1,0 +1,19 @@
+[
+  {"id": 1, "project": "Terrasol 1", "lot_size_m2": 114, "price_usd": 19500, "status": "available", "amenities": ["pool", "utilities", "trails", "BBQ"], "image": "images/lot-01.webp"},
+  {"id": 2, "project": "Terrasol 1", "lot_size_m2": 128, "price_usd": 20500, "status": "reserved", "amenities": ["pool", "utilities", "green areas"], "image": "images/lot-02.webp"},
+  {"id": 3, "project": "Terrasol 1", "lot_size_m2": 132, "price_usd": 21900, "status": "available", "amenities": ["pool", "trails", "BBQ"], "image": "images/lot-03.webp"},
+  {"id": 4, "project": "Terrasol 1", "lot_size_m2": 145, "price_usd": 23900, "status": "sold", "amenities": ["pool", "utilities"], "image": "images/lot-04.webp"},
+  {"id": 5, "project": "Terrasol 1", "lot_size_m2": 160, "price_usd": 25500, "status": "available", "amenities": ["pool", "green areas"], "image": "images/lot-05.webp"},
+  {"id": 6, "project": "Terrasol 1", "lot_size_m2": 172, "price_usd": 26900, "status": "available", "amenities": ["pool", "trails"], "image": "images/lot-06.webp"},
+  {"id": 7, "project": "Terrasol 2", "lot_size_m2": 114, "price_usd": 18900, "status": "available", "amenities": ["utilities", "trails", "BBQ"], "image": "images/lot-07.webp"},
+  {"id": 8, "project": "Terrasol 2", "lot_size_m2": 125, "price_usd": 19900, "status": "available", "amenities": ["green areas", "trails"], "image": "images/lot-08.webp"},
+  {"id": 9, "project": "Terrasol 2", "lot_size_m2": 138, "price_usd": 21900, "status": "reserved", "amenities": ["utilities", "BBQ"], "image": "images/lot-09.webp"},
+  {"id": 10, "project": "Terrasol 2", "lot_size_m2": 150, "price_usd": 23500, "status": "available", "amenities": ["trails", "green areas"], "image": "images/lot-10.webp"},
+  {"id": 11, "project": "Terrasol 2", "lot_size_m2": 162, "price_usd": 24900, "status": "sold", "amenities": ["utilities"], "image": "images/lot-11.webp"},
+  {"id": 12, "project": "Terrasol 2", "lot_size_m2": 174, "price_usd": 26900, "status": "available", "amenities": ["trails", "BBQ"], "image": "images/lot-12.webp"},
+  {"id": 13, "project": "Terrasol 2", "lot_size_m2": 188, "price_usd": 28900, "status": "available", "amenities": ["green areas", "utilities"], "image": "images/lot-13.webp"},
+  {"id": 14, "project": "Terrasol 1", "lot_size_m2": 200, "price_usd": 31500, "status": "available", "amenities": ["pool", "BBQ", "trails"], "image": "images/lot-14.webp"},
+  {"id": 15, "project": "Terrasol 1", "lot_size_m2": 220, "price_usd": 33900, "status": "available", "amenities": ["pool", "green areas", "utilities"], "image": "images/lot-15.webp"}
+]
+
+
